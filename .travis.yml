@@ -13,6 +13,9 @@ before_install:
 install:
   - travis_retry npm install
 script:
+  - npm run lint
+  - npm run test
   - test $TRAVIS_BRANCH == "master" && npm run integration-test
 after_success:
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
   - ./bin/deploy.sh
