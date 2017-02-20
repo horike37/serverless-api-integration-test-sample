@@ -26,6 +26,9 @@
     "lint": "eslint .",
     "integration-test": "jest"
   },
+  "jest": {
+    "testRegex": "integration-test/test.js"
+  },
   "author": "horike37",
   "license": "MIT"
 }
