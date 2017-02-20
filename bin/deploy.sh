@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 BRANCH=${TRAVIS_BRANCH:-$(git rev-parse --abbrev-ref HEAD)}
-if [[ $BRANCH == 'master' ]]; then
+if [[ $TRAVIS_TAG ]]; then
   STAGE="production"
 elif [[ $BRANCH == 'development' ]]; then
   STAGE="development"
