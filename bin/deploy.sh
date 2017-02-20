@@ -6,10 +6,12 @@ if [[ $TRAVIS_TAG ]]; then
 elif [[ $BRANCH == 'development' ]]; then
   STAGE="development"
 fi
+
 if [ -z ${STAGE+x} ]; then
   echo "Not deploying changes";
   exit 0;
 fi
+
 echo "Deploying from branch $BRANCH to stage $STAGE"
 npm prune --production  #remove devDependencies
 sls deploy --stage $STAGE --region $AWS_REGION
