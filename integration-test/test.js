@@ -34,7 +34,7 @@ describe('API Integration test', () => {
 
      return fetch(testEndpoint, { method: 'GET' })
        .then(response => response.json())
-       .then((json) => expect(json.message).to.equal('Go Serverless v1.0! Your function executed successfully!'));
+       .then((json) => expect(json.message).to.equal('!!Go Serverless v1.0! Your function executed successfully!'));
   });
 
   afterAll(() => {
