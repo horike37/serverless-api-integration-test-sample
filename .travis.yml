@@ -13,6 +13,6 @@ before_install:
 install:
   - travis_retry npm install
 script:
-  - npm run integration-test
+  - test $TRAVIS_BRANCH == "master" && npm run integration-test
 after_success:
   - ./bin/deploy.sh
