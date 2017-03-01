@@ -6,11 +6,11 @@ const execSync = require('child_process').execSync;
 
 module.exports = {
   deployService() {
-    execSync('sls deploy --stage integrationTest', { stdio: 'inherit' });
+    execSync('sls deploy --stage integrationtest', { stdio: 'inherit' });
   },
 
   removeService() {
-    execSync('sls remove --stage integrationTest', { stdio: 'inherit' });
+    execSync('sls remove --stage integrationtest', { stdio: 'inherit' });
   },
 
   createAndRemoveInBucket(bucketName) {
@@ -18,7 +18,7 @@ module.exports = {
     BbPromise.promisifyAll(S3, { suffix: 'Promised' });
 
     const params = {
-      Bucket: 'shimokitaoss',
+      Bucket: 'shimokitaoss-integrationtest',
       Key: 'object',
       Body: 'hello world',
     };
@@ -31,7 +31,7 @@ module.exports = {
   },
 
   getFunctionLogs(functionName) {
-    const logs = execSync(`sls logs --function ${functionName} --stage integrationTest --noGreeting true`);
+    const logs = execSync(`sls logs --function ${functionName} --stage integrationtest --noGreeting true`);
     const logsString = new Buffer(logs, 'base64').toString();
     process.stdout.write(logsString);
     return logsString;

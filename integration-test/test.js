@@ -16,7 +16,7 @@ describe('API Integration test', () => {
 
   beforeAll(() => {
     Utils.deployService();
-    stackName = 'sls-workshop-integrationTest'
+    stackName = 'sls-workshop-integrationtest'
   });
 
   it('should expose the endpoint(s) in the CloudFormation Outputs', () =>
@@ -38,7 +38,7 @@ describe('API Integration test', () => {
   });
 
   it('should trigger function when object created in bucket', () => Utils
-    .createAndRemoveInBucket('shimokitaoss')
+    .createAndRemoveInBucket('shimokitaoss-integrationtest')
     .delay(60000)
     .then(() => {
       const logs = Utils.getFunctionLogs('s3event');

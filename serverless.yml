@@ -14,4 +14,4 @@ functions:
   s3event:
     handler: handler.s3event
     events:
-      - s3: shimokitaoss
+      - s3: shimokitaoss-${opt:stage}
