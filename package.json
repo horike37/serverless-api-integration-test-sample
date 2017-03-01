@@ -27,7 +27,8 @@
     "integration-test": "jest"
   },
   "jest": {
-    "testRegex": "integration-test/test.js"
+    "testRegex": "integration-test/test.js$",
+    "setupTestFrameworkScriptFile": "<rootDir>/integration-test/setupTests.js"
   },
   "author": "horike37",
   "license": "MIT"
