@@ -9,7 +9,7 @@ env:
     - secure: LIh0lkl/t72EbMd47WgEXqnoG3REp+oPhIfDR5Cs8SMO4sacvo2j4pRkRKIwwpdKozxdgLEMl1rwDoHyYPH77FzvDnwiufpaYgQs278wmi+6ZvoC9nhgdn2sT7cFnYuYAO8dC7G/NHzXogAVmiObf3I+hzNLjDqWwWVjqPm41p4P4c2EJUVo0nVlcaUOf8elS1j6zp+ZL1EQo4Fm4IumDgNpZUP4bSq8CcVPvF0ynMlslI8XNMnBOiYmG+644qILScyPK1Q2SPdMLqL5YXHuYfE0aCpFcWOcNZIalBmaxPqFNW+QHQvaYiwoENx/i91KS3U2mqfcNYY4o9viih47PFsaddvtBeB83Wfls7GIZ/XmvBKREuS5Gwhz930DbAvUNQT1ylS9Y6TTIIWIbe3Qmv6ngd9TrDHlnbVhQYgar9ur+TgvLyhs5YLAeLn85c3Z3GYN5JUuCq5bclzh4I+myagaWJPoujS1nT+vKLUW8hu5MkxApn+uFUo/OIW1WG4qho/ddh7RoJbI9oTebWjpXhLwd1pSET1yBVSEetORluh0pW7r5A425Rm80B58Mg/x0NNmM1x6DBrCZ5R8d+Bam6C7P4WxxrRex7vFcqRWeKlJNINO+rtPW3Uuo/s9yC9980uQ00eY0kqhouR8ol6xs/4Xye1AHovPR2unzEe37fM=
 before_install:
   - chmod +x ./bin/deploy.sh
-  - npm i -g serverless@1.6.1
+  - npm i -g serverless@1.8.0
 install:
   - travis_retry npm install
 script:
